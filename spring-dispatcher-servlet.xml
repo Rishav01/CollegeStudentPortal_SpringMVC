@@ -1,0 +1,20 @@
+<beans xmlns="http://springframework.org/schema/beans" 
+       xmlns:xsi	="http://w3.org/2001/XMLSchema-instance"
+       xsi-schemaLocation="http://springframework.org/schema/beans
+       http://springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+<bean id="HandlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+
+<bean name="/welcome.html" class="com.gontuseries.hellocontoller.HelloController"/>
+
+<bean id="ViewResolver" 
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF</value>
+		</property>
+		<propety name="suffix">
+			<value>.jsp</value>
+		</propety>
+</bean>
+
+</beans>
